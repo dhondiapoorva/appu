@@ -1,2 +1,4 @@
 language: java
-script: mvn -DmemoryInMB=2000 -Dcores=4 evosuite:generate evosuite:export
+script: 
+    - jdk_switcher use openjdk8
+    - mvn -DmemoryInMB=2000 -Dcores=4 evosuite:generate evosuite:export
