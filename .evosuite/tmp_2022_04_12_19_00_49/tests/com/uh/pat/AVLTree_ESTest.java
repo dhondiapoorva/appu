@@ -38,7 +38,36 @@ public class AVLTree_ESTest extends AVLTree_ESTest_scaffolding {
       }
   }
 
-  
+  @Test(timeout = 4000)
+  public void test01()  throws Throwable  {
+      AVLTree aVLTree0 = new AVLTree();
+      aVLTree0.insert(1759);
+      aVLTree0.delete(1759);
+      aVLTree0.insert(1759);
+      aVLTree0.insert((-1));
+      int int0 = 0;
+      aVLTree0.delete(0);
+      aVLTree0.delete(4104);
+      aVLTree0.height();
+      aVLTree0.insert(3683);
+      aVLTree0.height();
+      AVLTree.Node aVLTree_Node0 = aVLTree0.getRoot();
+      AVLTree.Node aVLTree_Node1 = aVLTree0.getRoot();
+      aVLTree_Node1.height = 0;
+      aVLTree_Node0.left = aVLTree_Node1;
+      aVLTree_Node1.left = aVLTree_Node0.left;
+      aVLTree_Node0.left.left = aVLTree_Node1.left;
+      aVLTree0.getBalance(aVLTree_Node1);
+      aVLTree0.delete(1759);
+      aVLTree0.getRoot();
+      aVLTree0.getRoot();
+      aVLTree0.insert((-1));
+      aVLTree0.delete(0);
+      int int1 = 1784;
+      aVLTree0.insert(int1);
+      aVLTree0.find(int0);
+  }
+
   @Test(timeout = 4000)
   public void test02()  throws Throwable  {
       AVLTree aVLTree0 = new AVLTree();
